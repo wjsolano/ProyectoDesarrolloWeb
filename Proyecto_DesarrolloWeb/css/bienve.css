@@ -1,0 +1,16 @@
+#medi{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+   
+
+}
+
+#otr{
+   
+    display: flex;
+    justify-content: center;
+}
