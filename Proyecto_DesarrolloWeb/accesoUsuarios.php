@@ -32,13 +32,13 @@ if(isset($user)){
     $fila=mysqli_fetch_array($resultado);
 
     //controlar si en verad llegan datos
-    if($fila['id_log']==null){
+    if($fila['id_usuario']==null){
         //redirigir el mismo index
         header("location:index.html");
     }else{
         //definimos las variables de sesion y reedirigimos a la
         //pagina de usuario
-        $_SESSION['id']=$fila['id_log'];
+        $_SESSION['id']=$fila['id_usuario'];
         $_SESSION['nombre']=$fila['nombre'];
         header("location:paginaUsuario.php");
     }

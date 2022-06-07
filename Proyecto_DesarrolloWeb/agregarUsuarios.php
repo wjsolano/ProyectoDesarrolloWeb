@@ -60,20 +60,5 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <p>Estoy de acuerdo con <a href="index.html">Terminos y Condiciones</a></p>
     <p><a href="#">¿Ya tengo Cuenta?</a></p>
   </form>
-  <!--section class="form-register"  method="post">
-    <h4>Formulario Registro</h4>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-    <input class="controls" type="text" name="direccion" id="direccion" placeholder="Ingrese su Dirección">
-    <input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ingrese su Ciudad">
-    <input class="controls" type="text" name="telefono" id="telefono" placeholder="Ingrese su Número de Telefono">
-    <input class="controls" type="text" name="username" id="correo" placeholder="Ingrese un Nombre de usuario">
-    <input class="controls" type="password" name="pass" id="password" placeholder="Ingrese su Contraseña">
-    <input class="controls" type="text" name="tipo_usuario" id="tipo_usuario" placeholder="Ingrese el tipo de usuario">
-    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-    <input class="botons" type="submit" value="Registrar">
-    <p><a href="#">¿Ya tengo Cuenta?</a></p>
-  </section-->
-
 </body>
 </html>
