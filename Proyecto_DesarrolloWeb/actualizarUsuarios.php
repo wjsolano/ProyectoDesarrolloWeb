@@ -54,9 +54,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             //si se realiza la consulta con exito hacer esto
             //ENVIAR LOS DATOS HACIENDO UN BINDING
             //van seis s porque van a ir seis string
-            $stmt-> bind_param('ssssssssi', $_POST['nombres'], $_POST['apellidos'], $_POST['direccion'], 
+            $stmt-> bind_param('ssssssssii', $_POST['nombres'], $_POST['apellidos'], $_POST['direccion'], 
             $_POST['ciudad'], $_POST['telefono'], $_POST['cedula'], $_POST['username'], 
-            $_POST['pass'], $_POST['tipo_usuario']);
+            $_POST['pass'], $_POST['tipo_usuario'], $_GET['id']);
             //EJECUTAR LA SENTENCIA
             if($stmt-> execute()){
                 header("location: index.php");
@@ -92,7 +92,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <input class="controls" type="text" name="cedula" value=<?php echo $cedula ?> required>
     <input class="controls" type="text" name="username" value=<?php echo $username ?> required>
     <input class="controls" type="password" name="pass" value=<?php echo $pass ?> required>
-    <input class="controls" type="number" name="tipo_usuario" value=<?php echo $tipousu ?> required>
+    <!--input class="controls" type="number" name="tipo_usuario" value=</*?php echo $tipousu ?> required-->
+    <select class="controls" name="tipo_usuario" type="number" required>
+        <?php
+				$selectedAdmin = ($tipousu == 1) ? 'selected' : '';
+				$selectedCliente = ($tipousu == 2) ? 'selected' : '';
+				?>
+                    <option value="" selected="selected">Seleccionar</option>
+                    <option value=1 <?=$selectedAdmin ?>>Admin</option>
+                    <option value=2 <?=$selectedCliente ?>>Cliente</option>
+    </select>
     <input class="botons" type="submit" value="Registrar">
     <p>Estoy de acuerdo con <a href="index.html">Terminos y Condiciones</a></p>
     <p><a href="#">¿Ya tengo Cuenta?</a></p>

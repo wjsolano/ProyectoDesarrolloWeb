@@ -21,7 +21,7 @@ if(isset($user)){
     session_start();
 
     //consultar si los datos estan en la base
-    $query="SELECT * FROM biblioteca WHERE username='$user' AND
+    $query="SELECT * FROM usuario WHERE username='$user' AND
     password='$pass'";
 
     //ejecutar la consulta
@@ -35,12 +35,16 @@ if(isset($user)){
     if($fila['id_usuario']==null){
         //redirigir el mismo index
         header("location:index.html");
-    }else{
+    }else if($fila['tipo_usuario']==1){
         //definimos las variables de sesion y reedirigimos a la
         //pagina de usuario
         $_SESSION['id']=$fila['id_usuario'];
         $_SESSION['nombre']=$fila['nombre'];
-        header("location:paginaUsuario.php");
+        header("location:bienvenidaAdmin.html");
+    }else if ($fila['tipo_usuario']==2){
+        $_SESSION['id']=$fila['id_usuario'];
+        $_SESSION['nombre']=$fila['nombre'];
+        header("location:bienvenidaCliente.html");
     }
 }else{
     header("location:index.html");

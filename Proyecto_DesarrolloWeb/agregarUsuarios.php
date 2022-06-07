@@ -55,7 +55,12 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <input class="controls" type="text" name="cedula"placeholder="Ingrese su Número de Cédula" required>
     <input class="controls" type="text" name="username" placeholder="Ingrese un Nombre de usuario" required>
     <input class="controls" type="password" name="pass" placeholder="Ingrese su Contraseña" required>
-    <input class="controls" type="number" name="tipo_usuario" placeholder="Ingrese el tipo de usuario" required>
+    <!--input class="controls" type="number" name="tipo_usuario" placeholder="Ingrese el tipo de usuario" required-->
+    <select class="controls" name="tipo_usuario" type="number" required>
+    <option value="" selected="selected">Seleccionar Tipo de Usuario</option>
+      <option value=1>Admin</option>
+      <option value=2>Cliente</option>
+    </select>
     <input class="botons" type="submit" value="Registrar">
     <p>Estoy de acuerdo con <a href="index.html">Terminos y Condiciones</a></p>
     <p><a href="#">¿Ya tengo Cuenta?</a></p>
