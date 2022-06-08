@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <body>
   <form class="form-register" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <h4>Formulario Orden</h4>
-        <input class="controls" type="text" name="id_usuario" value="<?php echo $nombre?>" required>
+        <input class="controls" type="text" name="id_usuario" value="<?php echo $nombre ?>" required>
         <!--input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required!-->
         <select class="controls" name="id_libro">
   <?php 
