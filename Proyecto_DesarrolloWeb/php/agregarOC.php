@@ -1,7 +1,34 @@
 <?php
-require_once '../php/conexion.php';
+define('SERVERNAME','localhost');
+define('USERNAME', 'root');
+define('PASSWORD', '');
+define('DBNAME', 'biblioteca');
 
-//controlar si se enviaron datos por el post
+//conexion a la base de datos
+$conn=mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME) or
+die("Error en la conexión");
+
+//iniciar sesión
+session_start();
+
+//validar si se esta ingresando directamete sin loggueo
+if(!$_SESSION){
+    header("location:index.html");
+}
+
+$id_usuario=$_SESSION['id'];
+$consulta="SELECT nombre, apellido, direccion, ciudad, telefono,
+cedula, username, password, tipo_usuario FROM usuario WHERE 
+id_usuario=$id_usuario";
+
+//ejecuta la consulta
+$resultado=mysqli_query($conn, $consulta) or 
+die(mysqli_query_errono());
+
+//alamacenar los datos en una arreglo asociativo
+$fila=mysqli_fetch_array($resultado);
+$nombre=$fila['nombre'];
+
 if($_SERVER['REQUEST_METHOD']=='POST'){
     //VALIDAD si se enviaron todos los datos
     if(isset($_POST['id_usuario']) && isset($_POST['id_libro']) && isset($_POST['fecha_orden'])
@@ -43,7 +70,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <body>
   <form class="form-register" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <h4>Formulario Orden</h4>
-        <input class="controls" type="text" name="id_usuario" placeholder="Ingrese id de usuario" required>
+        <input class="controls" type="text" name="id_usuario" value="<?php echo $nombre?>" required>
         <input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required>
         <input class="controls" type="text" name="fecha_orden" placeholder="Ingrese la Fecha de Orden" required>
         <input class="controls" type="text" name="fecha_entrega" placeholder="Ingrese la Fecha de Entrega">
