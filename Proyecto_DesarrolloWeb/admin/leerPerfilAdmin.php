@@ -55,31 +55,47 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
 
 <div class="login-box">
     <div>
-        <h1>Datos del Cliente</h1>
+        <h1>Datos del Administrador</h1>
     </div>
-        <div >
-            <label>Nombres</label>
-            <p><?php echo $nombre . " " . $apellido;?></p>
+    <div align="center">
+    <div >
+            <label class="lab">Nombres: </label>
+            <label class="textopa"><?php echo $nombre . " " . $apellido;?></label>
         </div>
+        <br>
         <div>
-            <label>Dirección</label>
-            <p><?php echo $direccion;?></p>
+            <label class="lab">Dirección: </label>
+            <label class="textopa"><?php echo $direccion;?></label>
         </div>
+        <br>
         <div>
-            <label>Ciudad</label>
-            <p><?php echo $ciudad;?></p>
+            <label class="lab">Ciudad: </label>
+            <label class="textopa"><?php echo $ciudad;?></label>
         </div>
+        <br>
         <div>
-            <label>Teléfono</label>
-            <p><?php echo $telefono;?></p>
+            <label class="lab">Teléfono: </label>
+            <label class="textopa"><?php echo $telefono;?></label>
         </div>
+        <br>
         <div>
-            <label>Cédula</label>
-            <p><?php echo $cedula;?></p>
+            <label class="lab">Cédula: </label>
+            <label class="textopa"><?php echo $cedula;?></label>
+        </div>
+        <br>
+        <div>
+            <label class="lab">Tipo de usuario: </label>
+            <label class="textopa"><?php echo $tipousuario;?></label>
+        </div>
+        <br>
+        <div>
+            <label class="lab">Username: </label>
+            <label class="textopa"><?php echo $username;?></label>
         </div>
  
         <p><a href="../perfilAdmin.php" id="loadMore">Regresar</a></p>
     </div>
+    </div>
 </body>
-<link rel="stylesheet" href="estilos/estiPerfil.css" >
+<link rel="stylesheet" href="../css/estiPerfil.css">
 </html>

@@ -46,7 +46,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
     <div>
         <h1 align="center" > Perfil Cliente</h1>   
         <div id="tabla-contenedor">
-        <table border="2" class="table table-fixed" align="center">
+        <table border="2" class="table table-fixed" align="center" >
             <thead>
                 <tr>
                     <th id="cabecera">#</th>
@@ -83,5 +83,5 @@ $result= $conexion -> query($query); //todos los campos de la consulta
         <a href="bienvenidaCliente.html" id="loadMore">Regresar</a>
     </div>
 </body>
-<link rel="stylesheet" href="css/estiPerfil2.css">
+<link rel="stylesheet" href="css/estiPerfil.css">
 </html>

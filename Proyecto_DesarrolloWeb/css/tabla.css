@@ -2,9 +2,10 @@
 
 #tabla-contenedor {
     margin: 50px auto;
-    background: white;
+    background: #084464;
     text-align: left;
     border-collapse: collapse;
+   
   }
   
   th, td{
