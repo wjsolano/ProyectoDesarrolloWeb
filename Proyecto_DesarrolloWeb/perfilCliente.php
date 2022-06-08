@@ -35,7 +35,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 </head>
 <script type="text/javascript">
     function ConfirmDelate(){
-        var respuesta = confirm("¿De verdad desea eliminar el cliente?");
+        var respuesta = confirm("¿De verdad desea eliminar al usuario?");
         if(respuesta==true){
             return true;
         }else{

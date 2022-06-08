@@ -29,7 +29,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 </head>
 <script type="text/javascript">
     function ConfirmDelate(){
-        var respuesta = confirm("¿De verdad desea eliminar el cliente?");
+        var respuesta = confirm("¿De verdad desea eliminar al usuario?");
         if(respuesta==true){
             return true;
         }else{
@@ -64,7 +64,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                         echo '<td>';
                         echo '<a id="loadMore" href="admin/leerPerfilAdmin.php?id='.$row['id_usuario'].'">Leer</a>'; //para pasar es el ? segun donde de click
                         echo '<a id="loadMore" href="admin/actualizarUsuarios.php?id='.$row['id_usuario'].'">Editar</a>';
-                        echo '<a id="loadMore" href="eliminarPerfilAdmin.php?id='.$row['id_usuario'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
+                        echo '<a id="loadMore" href="admin/eliminarPerfilAdmin.php?id='.$row['id_usuario'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
                         echo '</td>';
                         echo '</tr>';
                     }

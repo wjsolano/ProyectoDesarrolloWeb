@@ -1,16 +1,22 @@
 <?php
-require_once 'conexion.php';
+require_once '../conexion.php';
+session_start();
+$iduser=$_SESSION['user'];
+
 //validar si se ´pasam los datos por el metodo GET, porque se envia por URL
 if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios vacios al inicio y al final
 //construir la consulta
   $query='DELETE  FROM usuario WHERE id_usuario=?';
    //preparar la sentencia
-   if($stmt=$conn->prepare($query)){
+   if($stmt=$conexion->prepare($query)){
     $stmt->bind_param('i', $_GET['id']); //i porque pasa un entero
     //ejecutar la sentencia
      if($stmt->execute()){
-
-        header("location:perfilAdmin.php");
+        if($iduser==$_GET['id']){
+            header("location:../index.html");
+            exit();
+        }
+        header("location:../perfilAdmin.php");
         exit();
     }else{
         echo 'Error! No existen resultados :o';
@@ -20,7 +26,7 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
     echo 'Error! Revise la conexion con la BD :o';
     exit();
 }$stmt->close();
-$conn -> close();
+$conexion -> close();
 }else{
     echo 'Error! Intente mas tarde :o';
     exit();

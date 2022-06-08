@@ -1,5 +1,6 @@
 <?php
 require_once '../conexion.php';
+
 //validar si se ´pasam los datos por el metodo GET, porque se envia por URL
 if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios vacios al inicio y al final
 //construir la consulta
