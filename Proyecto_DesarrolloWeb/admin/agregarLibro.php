@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <title>Formulario Libro</title>
 </head>
 <body>
@@ -50,6 +50,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         <input class="controls" type="text" name="categoria" placeholder="Categoria" required>
         <input class="controls" type="text" name="precio" placeholder="Precio" required>
         <input class="botons" type="submit" value="Agregar Libro">
+        <button class="botons"><a href="../librosAdmin.php" class="botons">Cancelar</a></button>
   </form>
 </body>
 </html>
