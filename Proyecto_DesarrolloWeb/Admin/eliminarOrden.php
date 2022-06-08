@@ -10,7 +10,7 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
     $stmt->bind_param('i', $_GET['id']); //i porque pasa un entero
     //ejecutar la sentencia
      if($stmt->execute()){
-        header("location:../php/perfilOC.php");
+        header("location:../php/perfilOA.php");
         exit();
     }else{
         echo 'Error! No existen resultados :o';

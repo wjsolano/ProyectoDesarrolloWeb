@@ -2,7 +2,7 @@
 require_once 'conexion.php'; /*TRAER LA CONEXION */
 //consulta de los datos
 
-$query = "SELECT id_usuario,nombre,apellido,direccion,ciudad,telefono,cedula,tipo_usuario,username FROM usuario";
+$query = "SELECT id_orden, id_usuario, id_libro, fecha_orden, fecha_entrega FROM ordenes";
 //ejecutar consulta
 $result= $conexion -> query($query); //todos los campos de la consulta
 ?>
@@ -58,13 +58,13 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                     while($row=$result-> fetch_assoc()){ //el resultado se transforme en matriz asociativa
                         echo '<tr>';
                         echo '<td>' . $row['id_usuario'] .'</td>'; 
-                        echo '<td>' . $row['id_orden']  . '</td>'; 
-                        echo '<td>' . $row['fecha_entrega'] .'</td>'; 
+                        echo '<td>' . $row['id_libro']  . '</td>'; 
                         echo '<td>' . $row['fecha_orden'] .'</td>'; 
+                        echo '<td>' . $row['fecha_entrega'] .'</td>'; 
                         echo '<td>';
-                        echo '<a id="loadMore" href="Admin/leer.php?id='.$row['id_orden'].'">Leer</a>'; //para pasar es el ? segun donde de click
-                        echo '<a id="loadMore" href="Admin/actualizar.php?id='.$row['id_orden'].'">Editar</a>';
-                        echo '<a id="loadMore" href="Admin/eliminar.php?id='.$row['id_orden'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
+                        echo '<a id="loadMore" href="../Admin/leerOrden.php?id='.$row['id_orden'].'">Leer</a>'; //para pasar es el ? segun donde de click
+                        echo '<a id="loadMore" href="../Admin/actualizarOrden.php?id='.$row['id_orden'].'">Editar</a>';
+                        echo '<a id="loadMore" href="../Admin/eliminarOrden.php?id='.$row['id_orden'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
                         echo '</td>';
                         echo '</tr>';
                     }

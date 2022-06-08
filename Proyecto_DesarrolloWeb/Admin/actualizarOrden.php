@@ -28,7 +28,7 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){
     }
     $stmt->close();
 }else{
-    header("location: ../php/perfilOC.php");
+    header("location: ../php/perfilOA.php");
     
     exit();
 }
@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $stmt-> bind_param('iissi', $_POST['id_usuario'], $_POST['id_libro'], $_POST['fecha_orden'], 
             $_POST['fecha_entrega'], $_GET['id']);
             if($stmt-> execute()){
-                header("location: ../php/perfilOC.php");
+                header("location: ../php/perfilOA.php");
                 exit();
             }else{
                 echo "Error!!! no hay sistema";
@@ -75,7 +75,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     <input class="botons" type="submit" value="Actualizar">
     
-    <button class="botons"><a href="../php/perfilOC.php" class="botons">Cancelar</a></button>
+    <button class="botons"><a href="../php/perfilOA.php" class="botons">Cancelar</a></button>
   </form>
 </body>
 </html>
