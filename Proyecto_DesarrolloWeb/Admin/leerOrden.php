@@ -69,7 +69,7 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
             <label class="lab">Fecha Entrega</label>
             <label class="textopa"><?php echo $fechaEntrega;?></label>
         </div>
-        <p><a href="../php/perfilOA.php" id="loadMore">Regresar</a></p>
+        <p><a href="../php/perfilOA.php" id="cerrar">Regresar</a></p>
     </div>
 </div>
 </body>
