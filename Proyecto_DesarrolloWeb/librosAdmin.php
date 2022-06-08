@@ -39,7 +39,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 </script>
 <body>
     <div>
-        <h2> LIBROS </h2>
+        <h1 align="center"> LIBROS </h1>
         <h4 style="width: 300px"><button class="buttons"><a href="admin/agregarLibro.php">
             <b>Agregar Libro</b></a></button>
         </h4>   

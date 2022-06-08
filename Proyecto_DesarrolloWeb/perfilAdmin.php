@@ -39,7 +39,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 </script>
 <body>
     <div>
-        <h1 align="center"> Clientes</h1>   
+        <h1 align="center"> Usuarios en Biblioteca</h1>   
         <div id="tabla-contenedor">
         <table border="2" class="table table-fixed" align="center">
             <thead>

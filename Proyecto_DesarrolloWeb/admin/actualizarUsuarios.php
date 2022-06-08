@@ -79,11 +79,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/style.css">
-  <title>Formulario Registro</title>
+  <title>Formulario editar información</title>
 </head>
 <body>
   <form class="form-register" action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post">
-  <h4>Formulario Registro</h4>
+  <h4>Formulario editar información</h4>
     <input class="controls" type="text" name="nombres" value=<?php echo $nombre ?> required>
     <input class="controls" type="text" name="apellidos" value=<?php echo $apellido ?> required>
     <input class="controls" type="text" name="direccion" value=<?php echo $direccion ?> required>
