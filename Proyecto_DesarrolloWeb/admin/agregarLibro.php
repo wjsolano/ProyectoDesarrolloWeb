@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         <input class="controls" type="text" name="categoria" placeholder="Categoria" required>
         <input class="controls" type="text" name="precio" placeholder="Precio" required>
         <input class="botons" type="submit" value="Agregar Libro">
-        <button class="botons"><a href="../librosClientes.php" class="botons">Cancelar</a></button>
+        <button class="botons"><a href="../librosAdmin.php" class="botons">Cancelar</a></button>
   </form>
 </body>
 </html>
