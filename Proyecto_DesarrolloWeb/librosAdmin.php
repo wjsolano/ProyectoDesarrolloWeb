@@ -71,7 +71,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                         echo '<td>';
                         echo '<a id="loadMore" href="admin/leerLibro.php?id='.$row['id_libro'].'">Leer</a>'; //para pasar es el ? segun donde de click
                         echo '<a id="loadMore" href="admin/actualizarLibro.php?id='.$row['id_libro'].'">Editar</a>';
-                        echo '<a id="loadMore" href="admin/eliminarLibro.php?id='.$row['id_libro'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
+                        echo '<a id="loadMore" href="admin/eliminarLibro.php?id='.$row['id_libro'].'" onclick="return ConfirmDelate()">Eliminar</a>';
                         echo '</td>';
                         echo '</tr>';
                     }
