@@ -49,24 +49,29 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
 <body>
 
 <div class="login-box">
+    <div>
+        <h1>Datos de Orden</h1>
+    </div>
+    <div align="center">
         <div>
-            <label>ID Usuario</label>
-            <p><?php echo $idUsuario;?></p>
+            <label class="lab">ID Usuario</label>
+            <p class="textopa"><?php echo $idUsuario;?></p>
         </div>
         <div >
-            <label>ID Libro</label>
-            <p><?php echo $idLibro;?></p>
+            <label class="lab">ID Libro</label>
+            <p class="textopa"><?php echo $idLibro;?></p>
         </div>
         <div>
-            <label>Fecha Orden</label>
-            <p><?php echo $fechaOrden;?></p>
+            <label class="lab">Fecha Orden</label>
+            <p class="textopa"><?php echo $fechaOrden;?></p>
         </div>
         <div>
-            <label>Fecha Entrega</label>
-            <p><?php echo $fechaEntrega;?></p>
+            <label class="lab">Fecha Entrega</label>
+            <p class="textopa"><?php echo $fechaEntrega;?></p>
         </div>
-        <p><a href="../php/perfilOC.php" id="loadMore">Regresar</a></p>
+        <p><a href="../php/perfilOC.php" id="cerrar">Regresar</a></p>
+    </div>
     </div>
 </body>
-<link rel="stylesheet" href="estilos/estiPerfil.css" >
+<link rel="stylesheet" href="../css/estiPerfil.css">
 </html>
