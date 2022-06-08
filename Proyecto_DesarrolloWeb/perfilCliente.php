@@ -30,7 +30,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
             text-align: left;
         }
     </style>
-    <title>Index</title>
+    <title>Perfil Cliente</title>
 </head>
 <script type="text/javascript">
     function ConfirmDelate(){
