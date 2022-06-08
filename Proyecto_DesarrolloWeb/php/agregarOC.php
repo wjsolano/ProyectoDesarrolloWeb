@@ -37,16 +37,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/ordenes.css"> 
+  <link rel="stylesheet" href="../css/style.css"> 
   <title>Formulario Orden</title>
 </head>
 <body>
   <form class="form-register" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <h4>Formulario Orden</h4>
-        <input class="controls" type="text" name="id_usuario" required>
-        <input class="controls" type="text" name="id_libro" required>
-        <input class="controls" type="text" name="fecha_orden" required>
-        <input class="controls" type="text" name="fecha_entrega" required>
+        <input class="controls" type="text" name="id_usuario" placeholder="Ingrese id de usuario" required>
+        <input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required>
+        <input class="controls" type="text" name="fecha_orden" placeholder="Ingrese la Fecha de Orden" required>
+        <input class="controls" type="text" name="fecha_entrega" placeholder="Ingrese la Fecha de Entrega">
         <input class="botons" type="submit" value="Agregar Orden">
   </form>
 </body>

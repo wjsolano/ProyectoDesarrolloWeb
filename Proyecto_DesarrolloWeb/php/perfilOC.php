@@ -13,7 +13,6 @@ $result= $conexion -> query($query); //todos los campos de la consulta
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/ordenes.css">
     <style>
         table, th, td{
             border: 1px solid black;
@@ -40,8 +39,11 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 <body>
     <div>
         <h2>Ordenes</h2>   
+            <h4 style="width: 300px"><button class="buttons"><a href="../php/agregarOC.php">
+            <b>Agregar Orden</b></a></button>
+        </h4> 
         <div>
-        <table border="2">
+        <table border="2" class="table table-fixed" align="center">
             <thead>
                 <tr>
                     <th></th>

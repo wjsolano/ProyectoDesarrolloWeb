@@ -68,10 +68,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <body>
   <form class="form-register" action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post">
   <h4>Formulario Actualizar</h4>
-    <input class="controls" type="text" name="id_usuario" value=<?php echo $idUsuario ?> required>
-    <input class="controls" type="text" name="id_libro" value=<?php echo $idLibro ?> required>
-    <input class="controls" type="text" name="fecha_orden" value=<?php echo $fechaOrden ?> required>
-    <input class="controls" type="text" name="fecha_entrega" value=<?php echo $fechaEntrega ?> required>
+    <input class="controls" type="text" name="id_usuario" placeholder="Ingrese id de usuario" value=<?php echo $idUsuario ?> required>
+    <input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" value=<?php echo $idLibro ?> required>
+    <input class="controls" type="text" name="fecha_orden" placeholder="Ingrese fecha orden" value=<?php echo $fechaOrden ?> required>
+    <input class="controls" type="text" name="fecha_entrega" placeholder="Ingrese fecha de entrega" value=<?php echo $fechaEntrega ?> >
 
     <input class="botons" type="submit" value="Actualizar">
     
