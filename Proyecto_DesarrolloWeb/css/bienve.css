@@ -1,0 +1,18 @@
+#medi{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+	color: white;
+	font-family:Arial, Helvetica, sans-serif;
+   
+
+}
+
+#otr{
+   
+    display: flex;
+    justify-content: center;
+}
