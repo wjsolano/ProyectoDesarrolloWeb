@@ -99,7 +99,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 				$selectedCliente = ($tipousu == 2) ? 'selected' : '';
 				?>
                     <option value="" selected="selected">Seleccionar</option>
-                    <option value=1 <?=$selectedAdmin ?>>Admin</option>
+                    <option value=1 <?=$selectedAdmin ?>>Administrador</option>
                     <option value=2 <?=$selectedCliente ?>>Cliente</option>
     </select>
     <input class="botons" type="submit" value="Registrar">
