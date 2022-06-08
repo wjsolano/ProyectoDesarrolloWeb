@@ -18,13 +18,12 @@ if(isset($user)){
     $conn=mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME) or
     die("Error en la conexión");
 
-    //iniciar sesión
-    
-
     //consultar si los datos estan en la base
     $query="SELECT * FROM usuario WHERE username='$user' AND
     password='$pass'";
 
+    //iniciar sesión
+    session_start();
     
     //ejecutar la consulta
     $resultado=mysqli_query($conn, $query) or 
@@ -36,7 +35,6 @@ if(isset($user)){
     //$_Proceso = $_POST["Proceso"];
     //header("Location: cliente/perfilCliente.php?proceso=" . $_POST['Proceso']);
 
-    session_start();
     $_SESSION['user']=$fila['id_usuario'];
     $_SESSION['usernameusar']=$fila['username'];
 
