@@ -53,6 +53,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                     <th id="cabecera">Apellido del autor</th>
                     <th id="cabecera">Categoria</th>
                     <th id="cabecera">Precio</th>
+                    <th id="cabecera">Opciones</th>
                 </tr>
             </thead>
             <tbody>

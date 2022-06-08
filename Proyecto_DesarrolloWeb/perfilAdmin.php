@@ -48,6 +48,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                     <th id="cabecera">Nombre</th>
                     <th id="cabecera">Apellido</th>
                     <th id="cabecera">Dirección</th>
+                    <th id="cabecera">Opciones</th>
                 </tr>
             </thead>
             <tbody>

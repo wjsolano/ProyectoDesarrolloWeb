@@ -44,11 +44,11 @@ $result= $conexion -> query($query); //todos los campos de la consulta
         <table border="2" class="table table-fixed" align="center">
             <thead>
                 <tr>
-                    <th></th>
                     <th id="cabecera">Id Usuario</th>
                     <th id="cabecera">Id Orden</th>
                     <th id="cabecera">Fecha Entrega</th>
                     <th id="cabecera">Fecha Orden</th>
+                    <th id="cabecera">Opciones</th>
                 </tr>
             </thead>
             <tbody>
