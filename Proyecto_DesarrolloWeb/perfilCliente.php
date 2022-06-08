@@ -80,7 +80,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
             </tbody>
         </table>
         </div>
-        <a href="bienvenidaCliente.html" id="cerrar">Regresar</a>
+        <a href="bienvenidaCliente.php" id="cerrar">Regresar</a>
     </div>
 </body>
 <link rel="stylesheet" href="css/estiPerfil.css">
