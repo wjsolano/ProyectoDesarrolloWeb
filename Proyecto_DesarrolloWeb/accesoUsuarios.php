@@ -48,11 +48,11 @@ if(isset($user)){
         //pagina de usuario
         $_SESSION['id']=$fila['id_usuario'];
         $_SESSION['nombre']=$fila['nombre'];
-        header("location:bienvenidaAdmin.html");
+        header("location:bienvenidaAdmin.php");
     }else if ($fila['tipo_usuario']==2){
         $_SESSION['id']=$fila['id_usuario'];
         $_SESSION['nombre']=$fila['nombre'];
-        header("location:bienvenidaCliente.html");
+        header("location:bienvenidaCliente.php");
     }
 }else{
     header("location:index.html");

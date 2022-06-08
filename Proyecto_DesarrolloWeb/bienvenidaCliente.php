@@ -1,3 +1,35 @@
+<?php
+define('SERVERNAME','localhost');
+define('USERNAME', 'root');
+define('PASSWORD', '');
+define('DBNAME', 'biblioteca');
+
+//conexion a la base de datos
+$conn=mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME) or
+die("Error en la conexión");
+
+//iniciar sesión
+session_start();
+
+//validar si se esta ingresando directamete sin loggueo
+if(!$_SESSION){
+    header("location:index.html");
+}
+
+$id_usuario=$_SESSION['id'];
+$consulta="SELECT nombre, apellido, direccion, ciudad, telefono,
+cedula, username, password, tipo_usuario FROM usuario WHERE 
+id_usuario=$id_usuario";
+
+//ejecuta la consulta
+$resultado=mysqli_query($conn, $consulta) or 
+die(mysqli_query_errono());
+
+//alamacenar los datos en una arreglo asociativo
+$fila=mysqli_fetch_array($resultado);
+$nombre=$fila['nombre'];
+$apellido=$fila['apellido'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +40,7 @@
 </head>
 
 <body>
-    <h1 align="center">Bienvenido cliente</h1>
+    <h1 align="center">Bienvenido <?php echo $nombre?> <?php echo $apellido?></h1>
     <div id="medi">
         <div id="ce">
             <div id="otr">
