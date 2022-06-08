@@ -3,7 +3,7 @@
 session_start();
 
 //controlar si se ingresa directamente sin loggueo
-if($_SESSION['nombre']!=null){
+if($_SESSION['id_usuario']!=null){
     session_destroy();
     header("location:index.html");
 }else{

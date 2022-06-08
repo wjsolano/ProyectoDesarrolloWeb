@@ -59,7 +59,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $_POST['pass'], $_POST['tipo_usuario'], $_GET['id']);
             //EJECUTAR LA SENTENCIA
             if($stmt-> execute()){
-                header("location: index.php");
+                header("location: ../perfilAdmin.php");
                 exit();
             }else{
                 echo "Error!!! no hay sistema";
