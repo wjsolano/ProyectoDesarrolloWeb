@@ -19,7 +19,6 @@ $result= $conexion -> query($query); //todos los campos de la consulta
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/estilos.css">
     <style>
         table, th, td{
             border: 1px solid black;
@@ -45,9 +44,9 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 </script>
 <body>
     <div>
-        <h2> Clientes</h2>   
+        <h1 align="center" > Perfil Cliente</h1>   
         <div id="tabla-contenedor">
-        <table border="2" class="table table-fixed">
+        <table border="2" class="table table-fixed" align="center">
             <thead>
                 <tr>
                     <th id="cabecera">#</th>
@@ -81,9 +80,8 @@ $result= $conexion -> query($query); //todos los campos de la consulta
             </tbody>
         </table>
         </div>
-        <a href="bienvenidaAdmin.html" id="loadMore">Regresar</a>
-
+        <a href="bienvenidaCliente.html" id="loadMore">Regresar</a>
     </div>
 </body>
-<link rel="stylesheet" href="css/estiPerfil.css">
+<link rel="stylesheet" href="css/estiPerfil2.css">
 </html>
