@@ -54,24 +54,26 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
     <div>
         <h1>Datos del Libro</h1>
     </div>
+    <div align="center">
         <div>
-            <label>Titulo</label>
-            <p><?php echo $titulo;?></p>
+            <label class="lab">Titulo</label>
+            <label class="textopa"><?php echo $titulo;?></label>
         </div>
         <div >
-            <label>Nombres</label>
-            <p><?php echo $nombre . " " . $apellido;?></p>
+            <label class="lab">Nombres</label>
+            <label class="textopa"><?php echo $nombre . " " . $apellido;?></label>
         </div>
         <div>
-            <label>Categoria</label>
-            <p><?php echo $categoria;?></p>
+            <label class="lab">Categoria</label>
+            <label class="textopa"><?php echo $categoria;?></label>
         </div>
         <div>
-            <label>Precio</label>
-            <p><?php echo $precio." $";?></p>
+            <label class="lab">Precio</label>
+            <label class="textopa"><?php echo $precio." $";?></label>
         </div>
-        <p><a href="../librosAdmin.php" id="loadMore">Regresar</a></p>
+        <p><a href="../librosAdmin.php" id="cerrar">Regresar</a></p>
+    </div>
     </div>
 </body>
-<link rel="stylesheet" href="estilos/estiPerfil.css" >
+<link rel="stylesheet" href="../css/estiPerfil.css">
 </html>
