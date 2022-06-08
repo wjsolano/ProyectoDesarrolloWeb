@@ -39,7 +39,7 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos  del Libro</title>
+    <title>Datos  de una Orden</title>
     <style>
         label{
             font-weight: bold;
@@ -49,24 +49,29 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
 <body>
 
 <div class="login-box">
+    <div>
+        <h1>Datos del Ordenes</h1>
+    </div>
+    <div align="center">
         <div>
-            <label>ID Usuario</label>
-            <p><?php echo $idUsuario;?></p>
+            <label class="lab">ID Usuario</label>
+            <label class="textopa"><?php echo $idUsuario;?></label>
         </div>
         <div >
-            <label>ID Libro</label>
-            <p><?php echo $idLibro;?></p>
+            <label class="lab">ID Libro</label>
+            <label class="textopa"><?php echo $idLibro;?></label>
         </div>
         <div>
-            <label>Fecha Orden</label>
-            <p><?php echo $fechaOrden;?></p>
+            <label class="lab">Fecha Orden</label>
+            <label class="textopa"><?php echo $fechaOrden;?></label>
         </div>
         <div>
-            <label>Fecha Entrega</label>
-            <p><?php echo $fechaEntrega;?></p>
+            <label class="lab">Fecha Entrega</label>
+            <label class="textopa"><?php echo $fechaEntrega;?></label>
         </div>
         <p><a href="../php/perfilOA.php" id="loadMore">Regresar</a></p>
     </div>
+</div>
 </body>
-<link rel="stylesheet" href="estilos/estiPerfil.css" >
+<link rel="stylesheet" href="../css/estiPerfil.css" >
 </html>
