@@ -41,7 +41,7 @@ require_once 'ordenesAdmin.html'
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo usuario</title>
+    <title>Formulario Orden</title>
 </head>
 <body>
     <div>
