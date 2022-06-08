@@ -70,7 +70,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <body>
   <form class="form-register" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <h4>Formulario Orden</h4>
-<<<<<<< HEAD
         <input class="controls" type="text" name="id_usuario" placeholder="Ingrese id de usuario" required>
         <!--input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required!-->
         <select class="controls" name="id_libro">
@@ -87,10 +86,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 
         
-=======
-        <input class="controls" type="text" name="id_usuario" value="<?php echo $nombre?>" required>
-        <input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required>
->>>>>>> 8c3747ddc7bc989bf68349d1fbd055f243f65ca0
         <input class="controls" type="text" name="fecha_orden" placeholder="Ingrese la Fecha de Orden" required>
         <input class="controls" type="text" name="fecha_entrega" placeholder="Ingrese la Fecha de Entrega">
         <input class="botons" type="submit" value="Agregar Orden">
