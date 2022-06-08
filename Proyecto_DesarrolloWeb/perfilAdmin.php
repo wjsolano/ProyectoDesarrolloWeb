@@ -21,7 +21,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
         }
 
         th, td{
-            padding: 5px;
+            padding: 10px;
             text-align: left;
         }
     </style>
@@ -39,7 +39,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 </script>
 <body>
     <div>
-        <h1 align="center"> Clientes</h1>   
+        <h1 align="center"> Usuarios en Biblioteca</h1>   
         <div id="tabla-contenedor">
         <table border="2" class="table table-fixed" align="center">
             <thead>
@@ -75,7 +75,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
             </tbody>
         </table>
         </div>
-        <a href="bienvenidaAdmin.html" id="loadMore">Regresar</a>
+        <a href="bienvenidaAdmin.html" id="cerrar">Regresar</a>
     </div>
 </body>
 <link rel="stylesheet" href="css/estiPerfil.css">

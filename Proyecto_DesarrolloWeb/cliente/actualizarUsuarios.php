@@ -83,7 +83,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 </head>
 <body>
   <form class="form-register" action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post">
-  <h4>Formulario Registro</h4>
+  <h4>Formulario editar información</h4>
     <input class="controls" type="text" name="nombres" value=<?php echo $nombre ?> required>
     <input class="controls" type="text" name="apellidos" value=<?php echo $apellido ?> required>
     <input class="controls" type="text" name="direccion" value=<?php echo $direccion ?> required>

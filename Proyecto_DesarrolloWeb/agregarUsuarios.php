@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
          cedula, username, password, tipo_usuario) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         //preparar sentencia
-        if($stmt = $conn->prepare($query)){
+        if($stmt = $conexion->prepare($query)){
             //enviar los datos haciendo un binding
             $stmt->bind_param('ssssssssi', $_POST['nombres'], $_POST['apellidos'], $_POST['direccion'], 
             $_POST['ciudad'], $_POST['telefono'], $_POST['cedula'], $_POST['username'], 
@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
       }
 
     }
-    $conn->close();
+    $conexion->close();
 }
 ?>
 
