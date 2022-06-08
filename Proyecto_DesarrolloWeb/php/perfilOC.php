@@ -75,7 +75,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
             </tbody>
         </table>
         </div>
-        <a href="bienvenidaAdmin.html" id="loadMore">Regresar</a>
+        <a href="../bienvenidaAdmin.html" id="loadMore">Regresar</a>
     </div>
 </body>
 <link rel="stylesheet" href="css/estiPerfil.css">
