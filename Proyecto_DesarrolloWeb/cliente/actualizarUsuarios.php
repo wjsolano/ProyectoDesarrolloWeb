@@ -104,7 +104,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     </select>
     <input class="botons" type="submit" value="Registrar">
     
-    <button class="botons"><a href="../perfilAdmin.php" class="botons">Cancelar</a></button>
+    <button class="botons"><a href="../perfilCliente.php" class="botons">Cancelar</a></button>
     
     
   </form>

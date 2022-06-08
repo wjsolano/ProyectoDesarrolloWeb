@@ -78,7 +78,7 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
             <p><?php echo $cedula;?></p>
         </div>
  
-        <p><a href="../perfilAdmin.php" id="loadMore">Regresar</a></p>
+        <p><a href="../perfilCliente.php" id="loadMore">Regresar</a></p>
     </div>
 </body>
 <link rel="stylesheet" href="estilos/estiPerfil.css" >

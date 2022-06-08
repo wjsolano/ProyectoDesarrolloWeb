@@ -2,9 +2,15 @@
 require_once 'conexion.php'; /*TRAER LA CONEXION */
 //consulta de los datos
 
-$query = "SELECT id_usuario,nombre,apellido,direccion,ciudad,telefono,cedula,tipo_usuario,username FROM usuario";
+//--------------------------------
+session_start();
+$iduser=$_SESSION['user'];
+
+
+$query = "SELECT id_usuario,nombre,apellido,direccion,ciudad,telefono,cedula,tipo_usuario,username FROM usuario WHERE id_usuario=$iduser";
 //ejecutar consulta
 $result= $conexion -> query($query); //todos los campos de la consulta
+
 ?>
 
 <!DOCTYPE html>
@@ -62,9 +68,9 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                         echo '<td>' . $row['apellido'] .'</td>'; 
                         echo '<td>' . $row['direccion'] .'</td>'; 
                         echo '<td>';
-                        echo '<a id="loadMore" href="admin/leerPerfilAdmin.php?id='.$row['id_usuario'].'">Leer</a>'; //para pasar es el ? segun donde de click
-                        echo '<a id="loadMore" href="admin/actualizarUsuarios.php?id='.$row['id_usuario'].'">Editar</a>';
-                        echo '<a id="loadMore" href="eliminarPerfilAdmin.php?id='.$row['id_usuario'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
+                        echo '<a id="loadMore" href="cliente/leerPerfilAdmin.php?id='.$row['id_usuario'].'">Leer</a>'; //para pasar es el ? segun donde de click
+                        echo '<a id="loadMore" href="cliente/actualizarUsuarios.php?id='.$row['id_usuario'].'">Editar</a>';
+                        echo '<a id="loadMore" href="cliente/eliminarPerfilAdmin.php?id='.$row['id_usuario'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
                         echo '</td>';
                         echo '</tr>';
                     }
@@ -76,9 +82,8 @@ $result= $conexion -> query($query); //todos los campos de la consulta
         </table>
         </div>
         <a href="bienvenidaAdmin.html" id="loadMore">Regresar</a>
+
     </div>
 </body>
 <link rel="stylesheet" href="css/estiPerfil.css">
 </html>
-
-
