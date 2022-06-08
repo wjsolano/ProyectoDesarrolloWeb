@@ -1,5 +1,5 @@
 <?php
-require_once 'php/conexion.php';
+require_once 'conexion.php';
 
 //controlar si se enviaron datos por el post
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -62,8 +62,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
       <option value=2>Cliente</option>
     </select>
     <input class="botons" type="submit" value="Registrar">
-    <p>Estoy de acuerdo con <a href="index.html">Terminos y Condiciones</a></p>
-    <p><a href="#">¿Ya tengo Cuenta?</a></p>
   </form>
 </body>
 </html>
