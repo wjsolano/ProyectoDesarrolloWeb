@@ -1,33 +1,5 @@
 <?php
-define('SERVERNAME','localhost');
-define('USERNAME', 'root');
-define('PASSWORD', '');
-define('DBNAME', 'biblioteca');
-
-//conexion a la base de datos
-$conn=mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME) or
-die("Error en la conexión");
-
-//iniciar sesión
-session_start();
-
-//validar si se esta ingresando directamete sin loggueo
-if(!$_SESSION){
-    header("location:index.html");
-}
-
-$id_usuario=$_SESSION['id'];
-$consulta="SELECT nombre, apellido, direccion, ciudad, telefono,
-cedula, username, password, tipo_usuario FROM usuario WHERE 
-id_usuario=$id_usuario";
-
-//ejecuta la consulta
-$resultado=mysqli_query($conn, $consulta) or 
-die(mysqli_query_errono());
-
-//alamacenar los datos en una arreglo asociativo
-$fila=mysqli_fetch_array($resultado);
-$nombre=$fila['nombre'];
+require_once 'conexion.php';
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     //VALIDAD si se enviaron todos los datos
@@ -70,22 +42,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <body>
   <form class="form-register" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <h4>Formulario Orden</h4>
-        <input class="controls" type="text" name="id_usuario" value="<?php echo $nombre ?>" required>
-        <!--input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required!-->
-        <select class="controls" name="id_libro">
-  <?php 
-  $mysqli= mysqli_connect("localhost","root","","biblioteca");
-  $resultado=mysqli_query($mysqli,"SELECT * from libros");    
-        while($fila=$resultado->fetch_assoc()):
-           $id=$file['id_libro'];
-           $nombre=$fila['titulo'];
-           echo "<option value=$id>$nombre</option>";
-        endwhile;
-        ?>
-</select>
-
-
-        
+        <input class="controls" type="number" name="id_usuario" placeholder="Ingrese id de usuario" required>
+        <input class="controls" type="number" name="id_libro" placeholder="Ingrese id de libro" required>
         <input class="controls" type="text" name="fecha_orden" placeholder="Ingrese la Fecha de Orden" required>
         <input class="controls" type="text" name="fecha_entrega" placeholder="Ingrese la Fecha de Entrega">
         <input class="botons" type="submit" value="Agregar Orden">
