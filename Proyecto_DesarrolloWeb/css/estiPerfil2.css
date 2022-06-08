@@ -1,0 +1,121 @@
+a, a:visited {
+    color: #33739E;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+a:hover {
+    text-decoration: none;
+}
+#loadMore {
+    padding: 10px;
+    text-align: center;
+    background-color: #33739E;
+    color: #fff;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+    transition: all 600ms ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+}
+#loadMore:hover {
+    background-color: #fff;
+    color: #33739E;
+}
+
+
+#tabla-contenedor {
+    margin: 50px auto;
+    background: #084464;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  
+  th, td{
+    border: solid 1px black;
+    padding:0;
+    border-collapse: collapse;
+    padding: 20px;
+  }
+  #cabecera{
+    background-color: #246355;
+    border-bottom: solid 5px #0F362d;
+    color: white;
+  }
+  tr:nth-child(even){
+    background-color: #ddd;
+  
+  }
+  tr:hover td{
+    background-color: #369681;
+    color: white;
+  }
+
+  body {
+    font-family: arial;
+    
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Erica+One);
+/* BODY */
+
+::selection {
+  background: transparent;
+}
+
+h1 {
+  cursor: default;
+  
+  top: 5px;
+  
+  -webkit-animation: bounce .3s ease infinite alternate;
+  
+  font-family: 'Erica One', cursive;
+  font-size: 80px;
+  color: #33739E;
+  text-align: center;
+  line-height: 100px;
+  text-shadow: 0 1px 0 #CCC,
+               0 2px 0 #CCC,
+               0 3px 0 #CCC,
+               0 4px 0 #CCC,
+               0 5px 0 #CCC,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px rgba(0, 0, 0, .6);
+}
+/* ANIMATION */
+@-webkit-keyframes bounce {
+  100% {
+    
+    
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 #CCC,
+                 0 7px 0 #CCC,
+                 0 8px 0 #CCC,
+                 0 9px 0 #CCC,
+                 0 30px 30px rgba(0, 0, 0, .3);
+  }
+}
+
+.tuclase {
+  text-align: left; 
+  font-family: Arial Black; 
+  font-weight: bold; 
+  font-size: 30px; 
+  color: #fff; 
+  text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+  }
+  
+  body{
+    background-color: #33739E;
+  }
