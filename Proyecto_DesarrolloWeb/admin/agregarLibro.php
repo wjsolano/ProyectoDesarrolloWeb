@@ -1,5 +1,5 @@
 <?php
-require_once 'php/conexion.php';
+require_once '../conexion.php';
 
 //controlar si se enviaron datos por el post
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -10,9 +10,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $query="INSERT INTO libros (titulo, nombre_autor, apellido_autor, categoria, precio) 
         VALUES (?, ?, ?, ?, ?)";
         //preparar sentencia
-        if($stmt = $conn->prepare($query)){
+        if($stmt = $conexion->prepare($query)){
             //enviar los datos haciendo un binding
-            $stmt->bind_param('ssssd', $_POST['titulo'], $_POST['nombre_autor'], $_POST['apellido_autor	'], 
+            $stmt->bind_param('ssssd', $_POST['titulo'], $_POST['nombre_autor'], $_POST['apellido_autor'], 
             $_POST['categoria'], $_POST['precio']);
             //ejecutar la sentencia
             if($stmt -> execute()){
@@ -24,11 +24,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             //cerrar la sentencia o stmt
             $stmt->close();
         }else{
-          echo "Error! Por favor intente más tarde";
+          echo "Error! Por favor intente más tarde2";
       }
 
     }
-    $conn->close();
+    $conexion->close();
 }
 ?>
 
