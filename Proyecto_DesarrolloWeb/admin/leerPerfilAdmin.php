@@ -93,7 +93,7 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
             <label class="textopa"><?php echo $username;?></label>
         </div>
  
-        <p><a href="../perfilAdmin.php" id="loadMore">Regresar</a></p>
+        <p><a href="../perfilAdmin.php" id="cerrar">Regresar</a></p>
     </div>
     </div>
 </body>
