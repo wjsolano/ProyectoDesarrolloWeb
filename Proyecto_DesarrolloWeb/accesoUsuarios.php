@@ -38,6 +38,7 @@ if(isset($user)){
 
     session_start();
     $_SESSION['user']=$fila['id_usuario'];
+    $_SESSION['usernameusar']=$fila['username'];
 
     //controlar si en verad llegan datos
     if($fila['id_usuario']==null){

@@ -44,7 +44,21 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   <form class="form-register" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <h4>Formulario Orden</h4>
         <input class="controls" type="text" name="id_usuario" placeholder="Ingrese id de usuario" required>
-        <input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required>
+        <!--input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required!-->
+        <select class="controls" name="id_libro">
+  <?php 
+  $mysqli= mysqli_connect("localhost","root","","biblioteca");
+  $resultado=mysqli_query($mysqli,"SELECT * from libros");    
+        while($fila=$resultado->fetch_assoc()):
+           $id=$file['id_libro'];
+           $nombre=$fila['titulo'];
+           echo "<option value=$id>$nombre</option>";
+        endwhile;
+        ?>
+</select>
+
+
+        
         <input class="controls" type="text" name="fecha_orden" placeholder="Ingrese la Fecha de Orden" required>
         <input class="controls" type="text" name="fecha_entrega" placeholder="Ingrese la Fecha de Entrega">
         <input class="botons" type="submit" value="Agregar Orden">

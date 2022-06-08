@@ -1,6 +1,7 @@
 <?php
 //conexion a la base de datos
-require_once 'conexion.php';
+require_once '<div class="">
+<php>conexion.php';
 
 //Saber si se llama por post
 if($_SERVER['REQUEST_METHOD']=='POST'){
