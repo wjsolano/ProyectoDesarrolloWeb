@@ -2,7 +2,7 @@
 require_once 'conexion.php'; /*TRAER LA CONEXION */
 //consulta de los datos
 
-$query = "SELECT id_usuario,nombre,apellido,direccion,ciudad,telefono,cedula,tipo_usuario,username FROM usuario";
+$query = "SELECT id_libro,titulo,nombre_autor,apellido_autor,categoria,precio FROM libros";
 //ejecutar consulta
 $result= $conexion -> query($query); //todos los campos de la consulta
 ?>
@@ -39,15 +39,17 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 </script>
 <body>
     <div>
-        <h2> Clientes</h2>   
+        <h2> LIBROS </h2>   
         <div id="tabla-contenedor">
         <table border="2" class="table table-fixed">
             <thead>
                 <tr>
                     <th id="cabecera">#</th>
-                    <th id="cabecera">Nombre</th>
-                    <th id="cabecera">Apellido</th>
-                    <th id="cabecera">Dirección</th>
+                    <th id="cabecera">Título</th>
+                    <th id="cabecera">Nombre del Autor</th>
+                    <th id="cabecera">Apellido del autor</th>
+                    <th id="cabecera">Categoria</th>
+                    <th id="cabecera">Precio</th>
                 </tr>
             </thead>
             <tbody>
@@ -55,16 +57,18 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                 if($result-> num_rows>0){
                     //si tiene resultado hacer esto
                     while($row=$result-> fetch_assoc()){ //el resultado se transforme en matriz asociativa
-                        // 'idusuario'= 1, 'nombreusuario'=luis
+                        // 'idusuario'= 1, 'titulousuario'=luis
                         echo '<tr>'; //el unto es para oncatenar
-                        echo '<td>' . $row['id_usuario'] .'</td>'; 
-                        echo '<td>' . $row['nombre']  . '</td>'; 
-                        echo '<td>' . $row['apellido'] .'</td>'; 
-                        echo '<td>' . $row['direccion'] .'</td>'; 
+                        echo '<td>' . $row['id_libro'] .'</td>'; 
+                        echo '<td>' . $row['titulo']  . '</td>'; 
+                        echo '<td>' . $row['nombre_autor'] .'</td>'; 
+                        echo '<td>' . $row['apellido_autor'] .'</td>';
+                        echo '<td>' . $row['categoria'] .'</td>'; 
+                        echo '<td>' . $row['precio'] .'</td>';  
                         echo '<td>';
-                        echo '<a id="loadMore" href="admin/leerPerfilAdmin.php?id='.$row['id_usuario'].'">Leer</a>'; //para pasar es el ? segun donde de click
-                        echo '<a id="loadMore" href="admin/actualizarUsuarios.php?id='.$row['id_usuario'].'">Editar</a>';
-                        echo '<a id="loadMore" href="eliminarPerfilAdmin.php?id='.$row['id_usuario'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
+                        echo '<a id="loadMore" href="admin/leerPerfilAdmin.php?id='.$row['id_libro'].'">Leer</a>'; //para pasar es el ? segun donde de click
+                        echo '<a id="loadMore" href="admin/actualizarUsuarios.php?id='.$row['id_libro'].'">Editar</a>';
+                        echo '<a id="loadMore" href="eliminarPerfilAdmin.php?id='.$row['id_libro'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
                         echo '</td>';
                         echo '</tr>';
                     }
