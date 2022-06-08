@@ -13,7 +13,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/ordenes.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
     <style>
         table, th, td{
             border: 1px solid black;
@@ -39,16 +39,16 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 </script>
 <body>
     <div>
-        <h2>Ordenes</h2>   
-        <div>
-        <table border="2">
+    <h1 align="center"> Ordenes</h1>   
+        <div id="tabla-contenedor">
+        <table border="2" class="table table-fixed" align="center">
             <thead>
                 <tr>
                     <th></th>
-                    <th>Id Usuario</th>
-                    <th>Id Orden</th>
-                    <th>Fecha Entrega</th>
-                    <th>Fecha Orden</th>
+                    <th id="cabecera">Id Usuario</th>
+                    <th id="cabecera">Id Orden</th>
+                    <th id="cabecera">Fecha Entrega</th>
+                    <th id="cabecera">Fecha Orden</th>
                 </tr>
             </thead>
             <tbody>
@@ -75,8 +75,8 @@ $result= $conexion -> query($query); //todos los campos de la consulta
             </tbody>
         </table>
         </div>
-        <a href="bienvenidaAdmin.html" id="loadMore">Regresar</a>
+        <a href="../bienvenidaAdmin.html" id="cerrar">Regresar</a>
     </div>
 </body>
-<link rel="stylesheet" href="css/estiPerfil.css">
+<link rel="stylesheet" href="../css/estiPerfil.css">
 </html>
