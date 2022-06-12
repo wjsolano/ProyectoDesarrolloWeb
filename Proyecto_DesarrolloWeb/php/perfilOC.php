@@ -1,8 +1,11 @@
 <?php
 require_once 'conexion.php'; /*TRAER LA CONEXION */
 //consulta de los datos
+session_start();
+$iduser=$_SESSION['user'];
+
 $query = "SELECT o.id_orden, o.id_usuario, o.id_libro, o.fecha_orden, o.fecha_entrega, l.titulo, u.nombre 
-FROM ordenes as o JOIN usuario as u ON o.id_usuario=u.id_usuario JOIN libros l ON o.id_libro=l.id_libro";
+FROM ordenes as o JOIN usuario as u ON o.id_usuario=u.id_usuario JOIN libros l ON o.id_libro=l.id_libro WHERE u.id_usuario=$iduser";
 //ejecutar consulta
 $result= $conexion -> query($query); //todos los campos de la consulta
 ?>
@@ -66,9 +69,9 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                         echo '<td>' . $row['fecha_orden'] .'</td>'; 
                         echo '<td>' . $row['fecha_entrega'] .'</td>'; 
                         echo '<td>';
-                        echo '<a id="loadMore" href="../Cliente/leer.php?id='.$row['id_orden'].'">Leer</a>'; //para pasar es el ? segun donde de click
-                        echo '<a id="loadMore" href="../Cliente/actualizar.php?id='.$row['id_orden'].'">Editar</a>';
-                        echo '<a id="loadMore" href="../Cliente/eliminar.php?id='.$row['id_orden'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
+                        echo '<a id="loadMore" href="../Admin/leerOrden.php?id='.$row['id_orden'].'">Leer</a>'; //para pasar es el ? segun donde de click
+                        echo '<a id="loadMore" href="../Admin/actualizarOrden.php?id='.$row['id_orden'].'">Editar</a>';
+                        echo '<a id="loadMore" href="../Admin/eliminarOrden.php?id='.$row['id_orden'].'" onclick="return ConfirmDelate()">Eliminar</a>'; 
                         echo '</td>';
                         echo '</tr>';
                     }
