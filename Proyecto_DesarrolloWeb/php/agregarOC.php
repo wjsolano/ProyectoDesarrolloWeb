@@ -93,6 +93,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         <input class="controls" type="text" name="fecha_orden" placeholder="Ingrese la Fecha de Orden" required>
         <input class="controls" type="text" name="fecha_entrega" placeholder="Ingrese la Fecha de Entrega">
         <input class="botons" type="submit" value="Agregar Orden">
+        
+        <a href="perfilOC.php" id="cerrar" ><input type="button" value="Regresar" class="botons"></a>
   </form>
 </body>
 </html>
