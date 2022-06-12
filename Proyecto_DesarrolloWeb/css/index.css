@@ -6,18 +6,18 @@
   
   body {
     font-family: arial;
-    background-image: url('../img/bg.png');
+    background-color: #165CAB;
   }
   
   .form-login {
     width: 400px;
     height: 340px;
-    background: #4e4d4d;
+    background: #90BDD4;
     margin: auto;
     margin-top: 180px;
     box-shadow: 7px 13px 37px #000;
     padding: 20px 30px;
-    border-top: 4px solid #017bab;
+    border-top: 4px solid #F26100;
     color: white;
   }
   
@@ -32,10 +32,10 @@
   
   .controls {
     width: 100%;
-    border: 1px solid #017bab;
+    border: 1px solid #F2A341;
     margin-bottom: 15px;
     padding: 11px 10px;
-    background: #252323;
+    background: #DAE8F5;
     font-size: 14px;
     font-weight: bold;
     color: white;
@@ -44,7 +44,7 @@
   .buttons {
     width: 100%;
     height: 40px;
-    background: #017bab;
+    background: #F26100;
     border: none;
     color: white;
     margin-bottom: 16px;
@@ -65,5 +65,5 @@
   
   .form-login a:hover {
     text-decoration: underline;
-    color:#017bab;
+    color:#F26100;
   }
