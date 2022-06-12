@@ -1,9 +1,11 @@
 <?php
 require_once '../php/conexion.php';
+
 //validar si se ´pasam los datos por el metodo GET, porque se envia por URL
 if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios vacios al inicio y al final
 //construir la consulta
-    $query='SELECT * FROM ordenes WHERE id_orden=?';
+    $query='SELECT o.id_orden, o.id_usuario, o.id_libro, o.fecha_orden, o.fecha_entrega, l.titulo, u.nombre 
+    FROM ordenes as o JOIN usuario as u ON o.id_usuario=u.id_usuario JOIN libros l ON o.id_libro=l.id_libro WHERE id_orden=?';
     //preparar la sentencia
     if($stmt=$conexion->prepare($query)){
         $stmt->bind_param('i',$_GET['id']); //i porque pasa un entero
@@ -12,10 +14,12 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
             $result=$stmt->get_result();
             if($result->num_rows==1){
                 $row=$result->fetch_array(MYSQLI_ASSOC); //transofrmar en una entidad asociativa
-                $idUsuario=$row['id_usuario'];
-                $idLibro=$row['id_libro'];
+                $id_usuario=$row['id_usuario'];
+                $id_libro=$row['id_libro'];
                 $fechaOrden=$row['fecha_orden'];
                 $fechaEntrega=$row['fecha_entrega'];
+                $nombreusua=$row['nombre'];
+                $titulo=$row['titulo'];
             }else{
                 echo 'Error! No existen resultados :o';
                 exit();
@@ -55,11 +59,11 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
     <div align="center">
         <div>
             <label class="lab">ID Usuario</label>
-            <label class="textopa"><?php echo $idUsuario;?></label>
+            <label class="textopa"><?php echo $nombreusua?></label>
         </div>
         <div >
             <label class="lab">ID Libro</label>
-            <label class="textopa"><?php echo $idLibro;?></label>
+            <label class="textopa"><?php echo $titulo?></label>
         </div>
         <div>
             <label class="lab">Fecha Orden</label>
