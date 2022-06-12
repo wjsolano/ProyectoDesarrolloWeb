@@ -47,7 +47,6 @@ $result= $conexion -> query($query); //todos los campos de la consulta
         <table border="2" class="table table-fixed">
             <thead>
                 <tr>
-                    <th id="cabecera">#</th>
                     <th id="cabecera">Título</th>
                     <th id="cabecera">Nombre del Autor</th>
                     <th id="cabecera">Apellido del autor</th>
@@ -63,7 +62,6 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                     while($row=$result-> fetch_assoc()){ //el resultado se transforme en matriz asociativa
                         // 'idusuario'= 1, 'titulousuario'=luis
                         echo '<tr>'; //el unto es para oncatenar
-                        echo '<td>' . $row['id_libro'] .'</td>'; 
                         echo '<td>' . $row['titulo']  . '</td>'; 
                         echo '<td>' . $row['nombre_autor'] .'</td>'; 
                         echo '<td>' . $row['apellido_autor'] .'</td>';

@@ -1,8 +1,8 @@
 <?php
 require_once 'conexion.php'; /*TRAER LA CONEXION */
 //consulta de los datos
-
-$query = "SELECT id_orden, id_usuario, id_libro, fecha_orden, fecha_entrega FROM ordenes";
+$query = "SELECT o.id_orden, o.id_usuario, o.id_libro, o.fecha_orden, o.fecha_entrega, l.titulo, u.nombre 
+FROM ordenes as o JOIN usuario as u ON o.id_usuario=u.id_usuario JOIN libros l ON o.id_libro=l.id_libro";
 //ejecutar consulta
 $result= $conexion -> query($query); //todos los campos de la consulta
 ?>
@@ -48,8 +48,8 @@ $result= $conexion -> query($query); //todos los campos de la consulta
         <table border="2" class="table table-fixed" align="center">
             <thead>
                 <tr>
-                    <th id="cabecera">#</th>
-                    <th id="cabecera">Id Orden</th>
+                    <th id="cabecera">Usuario</th>
+                    <th id="cabecera">Titulo del libro</th>
                     <th id="cabecera">Fecha Entrega</th>
                     <th id="cabecera">Fecha Orden</th>
                     <th id="cabecera">Opciones</th>
@@ -61,8 +61,8 @@ $result= $conexion -> query($query); //todos los campos de la consulta
                     //si tiene resultado hacer esto
                     while($row=$result-> fetch_assoc()){ //el resultado se transforme en matriz asociativa
                         echo '<tr>';
-                        echo '<td>' . $row['id_usuario'] .'</td>'; 
-                        echo '<td>' . $row['id_libro']  . '</td>'; 
+                        echo '<td>' . $row['nombre'] .'</td>'; 
+                        echo '<td>' . $row['titulo']  . '</td>'; 
                         echo '<td>' . $row['fecha_orden'] .'</td>'; 
                         echo '<td>' . $row['fecha_entrega'] .'</td>'; 
                         echo '<td>';

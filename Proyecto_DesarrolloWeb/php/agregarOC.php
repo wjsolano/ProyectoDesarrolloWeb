@@ -1,4 +1,5 @@
 <?php
+require_once '../conexion.php';
 define('SERVERNAME','localhost');
 define('USERNAME', 'root');
 define('PASSWORD', '');
@@ -27,7 +28,7 @@ die(mysqli_query_errono());
 
 //alamacenar los datos en una arreglo asociativo
 $fila=mysqli_fetch_array($resultado);
-$nombre=$fila['nombre'];
+$nombreusu=$fila['nombre'];
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     //VALIDAD si se enviaron todos los datos
@@ -70,15 +71,15 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <body>
   <form class="form-register" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <h4>Formulario Orden</h4>
-        <input class="controls" type="text" name="id_usuario" value="<?php echo $nombre ?>" required>
+        <input class="controls" type="text" name="id_usuario" value="<?php echo $id_usuario ?>" required>
         <!--input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required!-->
         <select class="controls" name="id_libro">
   <?php 
   $mysqli= mysqli_connect("localhost","root","","biblioteca");
   $resultado=mysqli_query($mysqli,"SELECT * from libros");    
-        while($fila=$resultado->fetch_assoc()):
+        while($file=$resultado->fetch_assoc()):
            $id=$file['id_libro'];
-           $nombre=$fila['titulo'];
+           $nombre=$file['titulo'];
            echo "<option value=$id>$nombre</option>";
         endwhile;
         ?>
