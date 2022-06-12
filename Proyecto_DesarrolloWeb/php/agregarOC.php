@@ -71,12 +71,12 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <body>
   <form class="form-register" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <h4>Formulario Orden</h4>
-        <select class="controls" name="id_usuario">
+        <select required class="controls" name="id_usuario">
           <option value="<?php echo $id_usuario ?>"><?php echo $nombreusu ?></option>
         </select>
         <!--input class="controls" type="text" name="id_usuario" value="<//?php echo $id_usuario ?>" required-->
         <!--input class="controls" type="text" name="id_libro" placeholder="Ingrese id de libro" required!-->
-        <select class="controls" name="id_libro">
+        <select required class="controls" name="id_libro">
   <?php 
   $mysqli= mysqli_connect("localhost","root","","biblioteca");
   $resultado=mysqli_query($mysqli,"SELECT * from libros");    

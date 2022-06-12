@@ -1,35 +1,6 @@
 <?php
 require_once '../php/conexion.php';
-define('SERVERNAME','localhost');
-define('USERNAME', 'root');
-define('PASSWORD', '');
-define('DBNAME', 'biblioteca');
-
-//conexion a la base de datos
-$conn=mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME) or
-die("Error en la conexión");
-
-//iniciar sesión
 session_start();
-
-//validar si se esta ingresando directamete sin loggueo
-if(!$_SESSION){
-    header("location:index.html");
-}
-
-$id_usuario=$_SESSION['id'];
-$consulta="SELECT nombre, apellido, direccion, ciudad, telefono,
-cedula, username, password, tipo_usuario FROM usuario WHERE 
-id_usuario=$id_usuario";
-
-//ejecuta la consulta
-$resultado=mysqli_query($conn, $consulta) or 
-die(mysqli_query_errono());
-
-//alamacenar los datos en una arreglo asociativo
-$fila=mysqli_fetch_array($resultado);
-$nombreusu=$fila['nombre'];
-
 if(isset($_GET['id']) && !empty(trim($_GET['id']))){
     //construir la consulta
     $query='SELECT o.id_orden, o.id_usuario, o.id_libro, o.fecha_orden, o.fecha_entrega, l.titulo, u.nombre 
@@ -44,7 +15,7 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){
                 $row=$result->fetch_array
                 (MYSQLI_ASSOC);
                 $id_usuario=$row['id_usuario'];
-                $idLibro=$row['id_libro'];
+                $id_libro=$row['id_libro'];
                 $fechaOrden=$row['fecha_orden'];
                 $fechaEntrega=$row['fecha_entrega']; 
                 $nombreusua=$row['nombre'];
@@ -105,14 +76,19 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     </select>
     <select class="controls" name="id_libro">
   <?php 
-  $mysqli= mysqli_connect("localhost","root","","biblioteca");
-  $resultado=mysqli_query($mysqli,"SELECT * from libros");    
-        while($file=$resultado->fetch_assoc()):
-           $id=$file['id_libro'];
-           $nombre=$file['titulo'];
-           echo "<option value=$id>$nombre</option>";
-        endwhile;
-        ?>
+$mysqli= mysqli_connect("localhost","root","","biblioteca");
+$resultado=mysqli_query($mysqli,"SELECT * from libros");   
+      while($file=$resultado->fetch_assoc()):
+         $id=$file['id_libro'];
+         $nombre=$file['titulo'];
+         if($nombre==$titulo){
+            echo "<option selected=selected>$titulo</option>";
+         }else{
+            echo "<option value=$id>$nombre</option>";
+         }
+      endwhile;
+      ?>
+        
 </select>
     <input class="controls" type="text" name="fecha_orden" placeholder="Ingrese fecha orden" value=<?php echo $fechaOrden ?> required>
     <input class="controls" type="text" name="fecha_entrega" placeholder="Ingrese fecha de entrega" value=<?php echo $fechaEntrega ?> >
