@@ -41,8 +41,8 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 <body>
     <div>
     <h1 align="center"> Ordenes</h1>   
-        <div id="tabla-contenedor">
-        <table border="2" class="table table-fixed" align="center">
+        <div>
+        <table border="2" class="table table-fixed" align="center" width="80%">
             <thead>
                 <tr>
                     <th id="cabecera">Usuario</th>
@@ -76,7 +76,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
             </tbody>
         </table>
         </div>
-        <a href="../bienvenidaAdmin.php" id="cerrar">Regresar</a>
+        <a href="../bienvenidaAdmin.php" class="btnCerrar" align="center">Regresar</a>
     </div>
 </body>
 <link rel="stylesheet" href="../css/estiPerfil.css">

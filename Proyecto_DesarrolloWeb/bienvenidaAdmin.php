@@ -43,7 +43,7 @@ $apellido=$fila['apellido'];
     <div id="medi">
         <div id="ce">
             <div id="otr">
-                <h2>Usuarios Biblioteca</h2>
+                <h2 class="tuclase">Usuarios Biblioteca</h2>
             </div>
             <a href="perfilAdmin.php">
                 <img src="img/perfil.png" alt="perfil" height="150px" width="150px">
@@ -52,7 +52,7 @@ $apellido=$fila['apellido'];
  
         <div id="ce">
             <div id="otr">
-                <h2>Ordenes</h2>
+                <h2 class="tuclase">Ordenes</h2>
             </div>
             <a href="php/PerfilOA.php">
                 <img src="img/lista-de-verificacion.png" alt="perfil" height="150px" width="150px">
@@ -61,7 +61,7 @@ $apellido=$fila['apellido'];
 
         <div id="ce">
             <div id="otr">
-                <h2>Libros</h2>
+                <h2 class="tuclase">Libros</h2>
             </div>
             <a href="librosAdmin.php">
                 <img src="img/libro.png" alt="perfil" height="150px" width="150px">
@@ -69,10 +69,9 @@ $apellido=$fila['apellido'];
         </div>
 
     </div>
-    <a href="cerrarSesion.php" id="cerrar">Cerrar Sesión</a>
+    <a href="cerrarSesion.php" class="btnCerrar" align="center">Cerrar Sesión</a>
 </body>
 <link rel="stylesheet" href="css/estiPerfil.css">
-
 <link rel="stylesheet" href="css/bienve.css">
 
 </html>

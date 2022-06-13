@@ -86,10 +86,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
            echo "<option value=$id>$nombre</option>";
         endwhile;
         ?>
-</select>
-
-
-        
+</select> 
         <input class="controls" type="text" name="fecha_orden" placeholder="Ingrese la Fecha de Orden" required>
         <input class="controls" type="text" name="fecha_entrega" placeholder="Ingrese la Fecha de Entrega">
         <input class="botons" type="submit" value="Agregar Orden">

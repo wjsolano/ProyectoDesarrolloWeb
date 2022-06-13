@@ -14,6 +14,8 @@ $result= $conexion -> query($query); //todos los campos de la consulta
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="shortcut icon" href="img/pila-de-libros.png" type="image/x-icon">
+    
     <style>
         table, th, td{
             border: 1px solid black;
@@ -40,8 +42,8 @@ $result= $conexion -> query($query); //todos los campos de la consulta
 <body>
     <div>
         <h1> LIBROS </h1>
-        <div id="tabla-contenedor">
-        <table border="2" class="table table-fixed">
+        <div>
+        <table border="2" class="table table-fixed" width="80%" align="center">
             <thead>
                 <tr>
                     <th id="cabecera">Título</th>
@@ -72,7 +74,7 @@ $result= $conexion -> query($query); //todos los campos de la consulta
             </tbody>
         </table>
         </div>
-        <a href="bienvenidaCliente.php" id="cerrar">Regresar</a>
+        <a href="bienvenidaCliente.php" class="btnCerrar" align="center">Regresar</a>
     </div>
 </body>
 <link rel="stylesheet" href="css/estiPerfil.css">

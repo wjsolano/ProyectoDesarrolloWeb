@@ -40,6 +40,7 @@ $apellido=$fila['apellido'];
 </head>
 
 <body>
+    <div class="content">
     <h1 align="center">Bienvenido <?php echo $nombre?> <?php echo $apellido?></h1>
     <div id="medi">
         <div id="ce">
@@ -68,10 +69,9 @@ $apellido=$fila['apellido'];
                 <img src="img/libro.png" alt="perfil" height="150px" width="150px">
             </a>
         </div>
-
     </div>
-    <a href="cerrarSesion.php" id="cerrar">Cerrar Sesión</a>
-
+</div>
+<a href="cerrarSesion.php" class="btnCerrar" align="center">Cerrar Sesión</a>
 </body>
 <link rel="stylesheet" href="css/bienve.css">
 <link rel="stylesheet" href="css/estiPerfil.css">
