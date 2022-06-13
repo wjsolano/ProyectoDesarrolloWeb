@@ -43,7 +43,7 @@ $apellido=$fila['apellido'];
     <div id="medi">
         <div id="ce">
             <div id="otr">
-                <h2 class="tuclase">Usuarios Biblioteca</h2>
+                <h2 class="tuclase">Usuarios</h2>
             </div>
             <a href="perfilAdmin.php">
                 <img src="img/perfil.png" alt="perfil" height="150px" width="150px">
