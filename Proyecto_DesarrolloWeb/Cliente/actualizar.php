@@ -82,7 +82,7 @@ $resultado=mysqli_query($mysqli,"SELECT * from libros");
          $id=$file['id_libro'];
          $nombre=$file['titulo'];
          if($nombre==$titulo){
-            echo "<option selected=selected>$titulo</option>";
+            echo "<option value=$id selected=selected>$titulo</option>";
          }else{
             echo "<option value=$id>$nombre</option>";
          }
