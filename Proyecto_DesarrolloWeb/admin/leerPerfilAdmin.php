@@ -85,7 +85,11 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){ //trim elimina los espacios
         <br>
         <div>
             <label class="lab">Tipo de usuario: </label>
-            <label class="textopa"><?php echo $tipousuario;?></label>
+            <label class="textopa"><?php if($tipousuario==1){
+                echo 'Administrador';
+            }else{
+                echo 'Cliente';
+            } ?></label>
         </div>
         <br>
         <div>
